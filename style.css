@@ -85,4 +85,46 @@ a {
   background-color: rgba(255, 255, 255, 0.5);
   margin: 10px 10px;
 }
+
+.access {
+  position: relative;
+}
+
+.access iframe {
+  width: 100%;
+  margin: 10px auto 0px;
+}
+
+.access .map_example {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  height: 500px;
+  margin: 10px auto 0px;
+  padding: 0 10px;
+  background-color: rgba(121, 121, 121, 0.5);
+  color: white;
+}
+
+.access .map_example h2 {
+  font-size: 2rem;
+}
+
+footer {
+  background-color: #9D8670;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  color: white;
+}
+
+footer ul li {
+  display: inline;
+}
+
+footer ul li a {
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */

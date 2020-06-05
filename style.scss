@@ -5,10 +5,9 @@ html {
 }
 a {
     text-decoration: none;
+    
 }
-// img {
-//     min-width: 100%;
-// }
+
 
 
 .top_wrapper { /*親div*/
@@ -70,5 +69,41 @@ a {
 }
 
 
+.access {
+    position: relative;
+    iframe {
+        width: 100%;
+        margin: 10px auto 0px;
+    }
+    .map_example {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        height: 500px;
+        margin: 10px auto 0px;
+        padding: 0 10px;
+        background-color: rgba(121,121,121,0.5);
+        color: white;
+        h2 {
+            font-size: 2rem;
+        } 
+    }
+    
+}
 
-
+footer {
+    background-color: #9D8670;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    color: white;
+    ul li{
+        display: inline;
+        // margin-right: 10px; 右寄りはどうすれば解消される？
+        a {
+            color: white;
+        }
+    }
+}
