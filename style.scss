@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+a {
+    text-decoration: none;
+}
+// img {
+//     min-width: 100%;
+// }
+
+
+.top_wrapper { /*親div*/
+    position: relative; /*相対配置*/
+    img {
+        width:100%;
+    }
+    p {
+        position: absolute; /*絶対配置*/
+        top: 50%;
+        left: 5%;
+        transform: translate(-5%,-50%);
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 2rem; 
+    }
+}
+
+
+@mixin menu {
+    position: relative;
+    img{
+        width: 100%;
+        margin: 10px auto;
+    }
+    h2 {
+        position: absolute;
+        top: 3%;
+        left: 5%;
+        transform: translate(-5%,-3%);
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 2rem; 
+    }
+    
+}
+
+.takeOut {
+    @include menu;
+}
+
+.eatIn {
+    @include menu;
+}
+
+.contents_1 {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(255,255,255,0.5);
+    margin: 10px 10px;
+}
+.contents_2{
+    position: absolute;
+    top: 73%;
+    background-color: rgba(255,255,255,0.5);
+    margin: 10px 10px;
+}
+
+
+
+
