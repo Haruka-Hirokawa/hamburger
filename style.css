@@ -132,17 +132,6 @@ input {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.contents_1 h3 {
-  margin: 1.5rem 0;
-  font-size: 2rem;
-  font-weight: normal;
-}
-
-.contents_1 p {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .contents_2 {
   position: absolute;
   top: 85%;
@@ -157,13 +146,13 @@ input {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.contents_2 h3 {
+dt {
   margin: 1.5rem 0;
   font-size: 2rem;
   font-weight: normal;
 }
 
-.contents_2 p {
+dd {
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -174,7 +163,10 @@ input {
 
 .access img {
   margin-top: 3rem;
+  width: 100%;
   height: 60rem;
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: bottom;
 }
 
