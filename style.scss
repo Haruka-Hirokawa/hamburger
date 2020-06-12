@@ -1,21 +1,101 @@
 @charset "UTF-8";
 
 html {
-    font-size: 100%;
+    font-size: 62.5%; // →10px
+}
+body{
+    line-height: 1.5rem;
 }
 a {
-    text-decoration: none;
-    
+    text-decoration: none;    
 }
 
+// img{ 
+//     max-width: 100%; ←入れる意味あるのかな…？
+// }
+
+// ↓ヘッダー
+// ↓メニュー ボタン・モーダル
+.menu_btn{
+    margin-top: 5%;
+    margin-right: 5%;
+    color: #707070;
+    font-size: 1.3rem;
+    text-align: right;
+}
+
+.menu_modal_wrapper {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #F2EDE9;    
+}
+// .modal {
+//     position: absolute;
+//     top: 20%;
+//     left: 34%;
+//     background-color: #e6ecf0;
+//     padding: 20px 0 40px;
+//     border-radius: 10px;
+//     width: 450px;
+//     height: auto;
+//     text-align: center;
+//   }
+// ↑メニュー ボタン・モーダル
 
 
+h1 {
+    margin: 2rem 0 4rem 0;
+    color: #707070;
+    font-size: 3rem;
+    text-align: center;    
+}
+
+// ↓検索フォーム
+#searchform {
+    height: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+input {
+    vertical-align : middle; // 検索ボックス、検索ボタンの高さのズレを修正
+}
+
+#keywords  {  
+    width: 20rem;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #707070;
+    border-radius: 5%;
+    background: url(images/searchform_loupe.jpg) no-repeat 8px;
+}
+
+#searchbutton{
+    width: 6rem;
+    padding: 1rem;
+    border: 1px solid #707070;
+    border-radius: 5%;
+    background-color: #F2EDE9;
+    font-size: 1.5rem;
+}
+// ↑検索フォーム
+// ↑ヘッダー
+
+
+// ↓トップ画像
 .top_wrapper { /*親div*/
     position: relative; /*相対配置*/
+    margin: 1rem 0;
+    
     img {
         width:100%;
     }
-    p {
+    h2 {
         position: absolute; /*絶対配置*/
         top: 50%;
         left: 5%;
@@ -23,87 +103,132 @@ a {
         margin: 0;
         padding: 0;
         color: white;
-        font-size: 2rem; 
+        font-size: 3rem;
+        font-weight: normal;
     }
 }
+// ↑トップ画像
 
 
-@mixin menu {
+// ↓Take Out・Eat in の部分
+.branch_menu {
+    display: flex;
+    justify-content: center;
     position: relative;
+    
     img{
-        width: 100%;
-        margin: 10px auto;
+        width: 95%;
+        margin: 1rem 0;
     }
     h2 {
         position: absolute;
-        top: 3%;
-        left: 5%;
-        transform: translate(-5%,-3%);
+        top: 5%;
+        left: 8%;
+        transform: translate(-8%,-5%);
         margin: 0;
         padding: 0;
         color: white;
-        font-size: 2rem; 
-    }
-    
-}
-
-.takeOut {
-    @include menu;
-}
-
-.eatIn {
-    @include menu;
+        font-size: 3rem;
+        line-height: 4rem;
+    }    
 }
 
 .contents_1 {
     position: absolute;
     top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    margin: 0;
+    padding: 0;
+    height: 23%;
+    margin: 1.5rem;
+    padding: 1rem;
     background-color: rgba(255,255,255,0.5);
-    margin: 10px 10px;
-}
-.contents_2{
-    position: absolute;
-    top: 73%;
-    background-color: rgba(255,255,255,0.5);
-    margin: 10px 10px;
-}
-
-
-.access {
-    position: relative;
-    iframe {
-        width: 100%;
-        margin: 10px auto 0px;
+    h3 {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        font-weight: normal;
     }
-    .map_example {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin: 0;
-        padding: 0;
-        height: 500px;
-        margin: 10px auto 0px;
-        padding: 0 10px;
-        background-color: rgba(121,121,121,0.5);
-        color: white;
-        h2 {
-            font-size: 2rem;
-        } 
+    p {
+        font-size: 1.5rem;
+        line-height: 2rem;
     }
     
 }
+.contents_2{
+    position: absolute;
+    top: 85%;
+    left: 0;
+    transform: translate(0,-73%);
+    margin: 0;
+    padding: 0;
+    height: 23%;
+    margin: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(255,255,255,0.5);
+    h3 {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        font-weight: normal;
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+// ↑Take Out・Eat in の部分
+
+
+// ↓map部分
+.access {
+    position: relative;
+    img {
+        margin-top: 3rem;
+        height: 60rem;
+        vertical-align: bottom; // divで囲んだimgタグ 下の余白を消す
+    }    
+}
+.map_example {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 60rem;
+    margin: 3rem auto 0;
+    padding: 3rem;
+    background-color: rgba(121,121,121,0.5);
+    color: white;
+    h2 {
+        margin: 2rem 0;
+        font-size: 3rem;
+        font-weight: normal;
+        line-height: 4rem;
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+}
+// ↑map部分
+
 
 footer {
+    height: 15rem;
+    padding: 1rem 0;
     background-color: #9D8670;
-    text-align: center;
-    margin: 0;
-    padding: 10px 0;
     color: white;
+    text-align: center;
     ul li{
         display: inline;
-        // margin-right: 10px; 右寄りはどうすれば解消される？
+        font-size: 1.8rem;
+        line-height: 8rem;
         a {
             color: white;
         }
     }
+}
+.copyright {
+    margin-top: 3rem;
 }

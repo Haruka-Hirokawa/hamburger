@@ -1,23 +1,82 @@
 @charset "UTF-8";
 html {
-  font-size: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.5rem;
 }
 
 a {
   text-decoration: none;
 }
 
+.menu_btn {
+  margin-top: 5%;
+  margin-right: 5%;
+  color: #707070;
+  font-size: 1.3rem;
+  text-align: right;
+}
+
+.menu_modal_wrapper {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #F2EDE9;
+}
+
+h1 {
+  margin: 2rem 0 4rem 0;
+  color: #707070;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#searchform {
+  height: 3rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+input {
+  vertical-align: middle;
+}
+
+#keywords {
+  width: 20rem;
+  margin-right: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #707070;
+  border-radius: 5%;
+  background: url(images/searchform_loupe.jpg) no-repeat 8px;
+}
+
+#searchbutton {
+  width: 6rem;
+  padding: 1rem;
+  border: 1px solid #707070;
+  border-radius: 5%;
+  background-color: #F2EDE9;
+  font-size: 1.5rem;
+}
+
 .top_wrapper {
   /*親div*/
   position: relative;
   /*相対配置*/
+  margin: 1rem 0;
 }
 
 .top_wrapper img {
   width: 100%;
 }
 
-.top_wrapper p {
+.top_wrapper h2 {
   position: absolute;
   /*絶対配置*/
   top: 50%;
@@ -27,104 +86,142 @@ a {
   margin: 0;
   padding: 0;
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
+  font-weight: normal;
 }
 
-.takeOut {
+.branch_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
 }
 
-.takeOut img {
-  width: 100%;
-  margin: 10px auto;
+.branch_menu img {
+  width: 95%;
+  margin: 1rem 0;
 }
 
-.takeOut h2 {
+.branch_menu h2 {
   position: absolute;
-  top: 3%;
-  left: 5%;
-  -webkit-transform: translate(-5%, -3%);
-          transform: translate(-5%, -3%);
+  top: 5%;
+  left: 8%;
+  -webkit-transform: translate(-8%, -5%);
+          transform: translate(-8%, -5%);
   margin: 0;
   padding: 0;
   color: white;
-  font-size: 2rem;
-}
-
-.eatIn {
-  position: relative;
-}
-
-.eatIn img {
-  width: 100%;
-  margin: 10px auto;
-}
-
-.eatIn h2 {
-  position: absolute;
-  top: 3%;
-  left: 5%;
-  -webkit-transform: translate(-5%, -3%);
-          transform: translate(-5%, -3%);
-  margin: 0;
-  padding: 0;
-  color: white;
-  font-size: 2rem;
+  font-size: 3rem;
+  line-height: 4rem;
 }
 
 .contents_1 {
   position: absolute;
   top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin: 0;
+  padding: 0;
+  height: 23%;
+  margin: 1.5rem;
+  padding: 1rem;
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 10px 10px;
+}
+
+.contents_1 h3 {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.contents_1 p {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .contents_2 {
   position: absolute;
-  top: 73%;
+  top: 85%;
+  left: 0;
+  -webkit-transform: translate(0, -73%);
+          transform: translate(0, -73%);
+  margin: 0;
+  padding: 0;
+  height: 23%;
+  margin: 1.5rem;
+  padding: 1rem;
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 10px 10px;
+}
+
+.contents_2 h3 {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.contents_2 p {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .access {
   position: relative;
 }
 
-.access iframe {
-  width: 100%;
-  margin: 10px auto 0px;
+.access img {
+  margin-top: 3rem;
+  height: 60rem;
+  vertical-align: bottom;
 }
 
-.access .map_example {
+.map_example {
   position: absolute;
   top: 0;
   left: 0;
   margin: 0;
   padding: 0;
-  height: 500px;
-  margin: 10px auto 0px;
-  padding: 0 10px;
+  height: 60rem;
+  margin: 3rem auto 0;
+  padding: 3rem;
   background-color: rgba(121, 121, 121, 0.5);
   color: white;
 }
 
-.access .map_example h2 {
-  font-size: 2rem;
+.map_example h2 {
+  margin: 2rem 0;
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 4rem;
+}
+
+.map_example p {
+  font-size: 1.5rem;
+  line-height: 3rem;
 }
 
 footer {
+  height: 15rem;
+  padding: 1rem 0;
   background-color: #9D8670;
-  text-align: center;
-  margin: 0;
-  padding: 10px 0;
   color: white;
+  text-align: center;
 }
 
 footer ul li {
   display: inline;
+  font-size: 1.8rem;
+  line-height: 8rem;
 }
 
 footer ul li a {
   color: white;
+}
+
+.copyright {
+  margin-top: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
