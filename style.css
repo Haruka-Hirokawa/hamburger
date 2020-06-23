@@ -11,65 +11,72 @@ a {
   text-decoration: none;
 }
 
-.menu_btn {
-  margin-top: 5%;
-  margin-right: 5%;
-  color: #707070;
-  font-size: 1.3rem;
-  text-align: right;
+.contents_group_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
-.menu_modal_wrapper {
-  display: none;
+.sidebar {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
   position: fixed;
+  -webkit-transition: all 300ms 0s ease;
+  transition: all 300ms 0s ease;
   z-index: 10;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.close_modal {
-  margin-bottom: 8rem;
-}
-
-.fa-times {
-  position: absolute;
-  top: 3%;
-  left: 95%;
-  -webkit-transform: translate(-95%, -3%);
-          transform: translate(-95%, -3%);
-  color: #707070;
-}
-
-.menu {
-  list-style: none;
-  position: absolute;
-  top: 0;
-  left: 10%;
+  padding: 2rem;
   background-color: #F2EDE9;
-  padding: 5rem 3rem;
-  width: 90%;
-  height: 90%;
   color: #707070;
+}
+
+.is_open {
+  left: 10%;
   overflow-y: scroll;
   /* 高さを指定しているので中身が超えた分はスクロールできるように */
 }
 
-h3 {
+.close_button {
+  text-align: right;
+}
+
+.sidebar_title {
+  margin: 3rem 0;
+  padding-bottom: 3rem;
   font-size: 2rem;
 }
 
-.sidemenu {
+.sidebar_menu_list {
   list-style: none;
+  margin: 3rem 0;
+}
+
+.sidebar_menu_list h3 {
+  font-size: 1.7rem;
+  font-weight: normal;
+}
+
+.sidebar_menu {
   padding: 3rem;
+  list-style: none;
   font-size: 1.5rem;
   line-height: 3rem;
 }
 
-.sidemenu li a {
+.sidebar_menu li a {
   color: #707070;
+}
+
+.sidebar_menu_button {
+  margin-top: 5%;
+  margin-right: 5%;
+  color: #707070;
+  text-align: right;
 }
 
 h1 {
@@ -258,4 +265,4 @@ footer ul li a {
 .copyright {
   margin-top: 3rem;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style2.css.map */
