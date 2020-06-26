@@ -1,3 +1,4 @@
+// ↓共通部分
 @charset "UTF-8";
 
 html {
@@ -9,12 +10,36 @@ body{
 a {
     text-decoration: none;    
 }
+// ↑共通部分
 
 
 .contents_group_wrapper {
     display: flex;
     flex-direction: row-reverse;
 }
+
+
+// ↓メディアクエリ
+@mixin breakpoint($point) {
+    @if $point == tablet {
+        @media (min-width: 641px) {
+            @content;
+        }
+    }
+
+    @if $point == pc {
+        @media (min-width: 769px) {
+            @content;
+        }
+    }
+
+    @if $point == wide {
+        @media (min-width: 1000px) {
+            @content;
+        }
+    }
+}
+// ↑メディアクエリ
 
 
 // ↓サイドバー
@@ -108,7 +133,7 @@ a {
     color: #707070;
     text-align: right;
 
-    @include media( pc ) {
+    @include breakpoint( pc ) {
         display: none;
     }
 }
@@ -243,9 +268,9 @@ dd {
         margin-top: 3rem;
         width: 100%;
         height: 60rem;
-        object-fit: cover;
+        object-fit: cover; // 画像の縦横比を維持したままトリミングして画面を埋める    
         vertical-align: bottom; // divで囲んだimgタグ 下の余白を消す
-        filter: contrast(60%);
+        filter: contrast(60%); // 画像のコントラストを調整（グレー掛けのために記載）    
     }  
 }
 
@@ -295,51 +320,3 @@ footer {
 .copyright {
     margin-top: 3rem;
 }
-
-
-
-// ブレイクポイントの設定
-$bp_tablet: 641px;
-$bp_pc: 769px;
-$bp_wide: 1000px;
-
-// メディアクエリ
-@mixin media($media_width) {
-    @if $media_width == tablet {
-        @media only screen and (min-width: $bp_tablet) {
-            @content;
-        }
-    }
-
-    @else if $media_width == pc {
-        @media only screen and (min-width: $bp_pc) {
-            @content;
-        }
-    }
-
-    @else if $media_width == wide {
-        @media only screen and (min-width: $bp_wide) {
-            @content;
-        }
-    }
-}
-
-// @mixin breakpoint($point) {
-//     @if $point == tablet {
-//         @media (min-width: 641px) {
-//             @content;
-//         }
-//     }
-
-//     @if $point == pc {
-//         @media (min-width: 769px) {
-//             @content;
-//         }
-//     }
-
-//     @if $point == wide {
-//         @media (min-width: 1000px) {
-//             @content;
-//         }
-//     }
-// }
