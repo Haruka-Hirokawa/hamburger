@@ -29,9 +29,9 @@ a {
 
     padding: 2rem;
     background-color: #F2EDE9;
-    color: #707070; 
+    color: #707070;
 }
-&.is_open {
+.is_open {
     left: 10%;
     overflow-y:scroll; /* 高さを指定しているので中身が超えた分はスクロールできるように */
 }
@@ -68,6 +68,10 @@ a {
 // }
 // ？
 
+.close_button {
+    text-align: right;
+}
+
 .sidebar_title {
     margin: 3rem 0;
     padding-bottom: 3rem;
@@ -99,10 +103,14 @@ a {
 // ↓ヘッダー
 // ↓メニュー ボタン
 .sidebar_menu_button{
-    margin-top: 5%;
+    margin-top: 8%;
     margin-right: 5%;
     color: #707070;
     text-align: right;
+
+    @include media( pc ) {
+        display: none;
+    }
 }
 // ↑メニュー ボタン
 
@@ -237,19 +245,20 @@ dd {
         height: 60rem;
         object-fit: cover;
         vertical-align: bottom; // divで囲んだimgタグ 下の余白を消す
+        filter: contrast(60%);
     }  
 }
 
-.map_example {
+.map_explanation {
     position: absolute;
     top: 0;
     left: 0;
     margin: 0;
     padding: 0;
-    height: 60rem;
+    height: 50%;
     margin: 3rem auto 0;
     padding: 3rem;
-    background-color: rgba(121,121,121,0.5);
+    background-color: rgba(0,0,0,0.3);
     color: white;
     h2 {
         margin: 2rem 0;
@@ -286,3 +295,51 @@ footer {
 .copyright {
     margin-top: 3rem;
 }
+
+
+
+// ブレイクポイントの設定
+$bp_tablet: 641px;
+$bp_pc: 769px;
+$bp_wide: 1000px;
+
+// メディアクエリ
+@mixin media($media_width) {
+    @if $media_width == tablet {
+        @media only screen and (min-width: $bp_tablet) {
+            @content;
+        }
+    }
+
+    @else if $media_width == pc {
+        @media only screen and (min-width: $bp_pc) {
+            @content;
+        }
+    }
+
+    @else if $media_width == wide {
+        @media only screen and (min-width: $bp_wide) {
+            @content;
+        }
+    }
+}
+
+// @mixin breakpoint($point) {
+//     @if $point == tablet {
+//         @media (min-width: 641px) {
+//             @content;
+//         }
+//     }
+
+//     @if $point == pc {
+//         @media (min-width: 769px) {
+//             @content;
+//         }
+//     }
+
+//     @if $point == wide {
+//         @media (min-width: 1000px) {
+//             @content;
+//         }
+//     }
+// }
