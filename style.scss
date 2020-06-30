@@ -13,12 +13,6 @@ a {
 // ↑共通部分
 
 
-.contents_group_wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-
 // ↓メディアクエリ
 @mixin breakpoint($point) {
     @if $point == tablet {
@@ -41,6 +35,15 @@ a {
 }
 // ↑メディアクエリ
 
+.contents_group_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include breakpoint( pc ) {
+        overflow:hidden; // padding-bottom: 10000px;、margin-bottom: -10000px;とセット サイドバーとメインコンテンツの高さを合わせる       
+    }
+}
+
 
 // ↓サイドバー
 .sidebar {
@@ -55,6 +58,15 @@ a {
     padding: 2rem;
     background-color: #F2EDE9;
     color: #707070;
+
+    @include breakpoint( pc ) {
+        position: static; // position:absolute/fixed/relative;の指定を外す
+        width: 25%;
+
+        padding-bottom: 10000px;
+        margin-bottom: -10000px;
+        // 上記２行 overflow:hidden;とセット サイドバーとメインコンテンツの高さを合わせる
+    }
 }
 .is_open {
     left: 10%;
@@ -94,7 +106,12 @@ a {
 // ？
 
 .close_button {
+    margin-right: 10%;
     text-align: right;
+
+    @include breakpoint( pc ) {
+        display: none;
+    }
 }
 
 .sidebar_title {
@@ -142,7 +159,8 @@ a {
 h1 {
     margin: 2rem 0 4rem 0;
     color: #707070;
-    font-size: 3rem;
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
     text-align: center;    
 }
 
@@ -202,6 +220,16 @@ input {
 
 
 // ↓Take Out・Eat in の部分
+.branch_menu_wrapper{
+    ul {
+        @include breakpoint( pc ) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+}
+
 .branch_menu {
     display: flex;
     justify-content: center;
@@ -219,7 +247,8 @@ input {
         margin: 0;
         padding: 0;
         color: white;
-        font-size: 3rem;
+        font-size: 3.5rem;
+        font-family: 'Roboto', sans-serif;
         line-height: 4rem;
     }    
 }
@@ -320,3 +349,95 @@ footer {
 .copyright {
     margin-top: 3rem;
 }
+
+
+// ↓archive.html
+// ↓archive、archive_searchトップ画像
+.archive_top_wrapper { /*親div*/
+    position: relative; /*相対配置*/
+    margin: 1rem 0;
+    
+    img {
+        width:100%;
+        height: 22rem;
+        object-fit: none; // リサイズせず元の画像の大きさで表示
+        zoom: 1.3; // 画像を拡大
+        object-position: 0 48%; // 画像を中央以外の位置でトリミング。左上を基準にして、: 横の位置 縦の位置;
+    }
+    h2 {
+        position: absolute; /*絶対配置*/
+        top: 50%;
+        left: 5%;
+        transform: translate(-5%,-50%);
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
+        
+        span {
+            font-size: 1.5rem;
+            font-weight: normal;
+            line-height: 5rem;
+        }
+    }
+}
+// ↑archive、archive_searchトップ画像
+
+
+.about_archive {
+    margin: 2rem;
+    color: #3C2A10;
+    h2{
+        padding: 1rem 0 3rem;
+        font-size: 2.5rem;
+        font-weight: normal;
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+// ↓メニュー写真・説明 繰り返し部分
+.archive_branch_menu_wrapper {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 95%;
+    img{
+        display: block;
+        margin: auto;
+        width: 95%;
+        height: auto;
+    }
+    
+}
+
+.archive_branch_menu {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    width: 95%;
+    background-color: #3C2B1C;
+    color: white;
+    dt {
+        margin: 2rem 0;
+        font-size: 2rem;
+        font-weight: normal;
+    }
+    dd {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    & div {
+        margin: 5rem auto 3rem;
+        padding: 1.5rem 0;
+        width: 50%;
+        border-radius: 10rem;
+        background-color: white;
+        color: #707070;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+// ↑メニュー写真・説明 繰り返し部分
