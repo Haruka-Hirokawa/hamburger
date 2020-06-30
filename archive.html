@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/22e109cfd0.js" crossorigin="anonymous"></script>
+    
+    <title>ハンバーガーサイト</title>
+</head>
+
+
+<body>
+    <!-- .sidebar(サイドバー部分)＋.contents_group(ヘッダーからマップまでの部分)をグルーピング -->
+    <div class="contents_group_wrapper">
+
+        <!-- ？ -->
+        <!-- サイドバーのグレーがかってる部分 -->
+        <!-- <div class="sidebar_background" id="sidebar_background"></div> -->
+        <!-- ？ -->
+
+        <!-- サイドバー -->
+        <div class="sidebar" id="js_sidebar">
+
+            <!-- ？ -->
+            <!-- サイドバーのグレーがかってる部分 -->
+            <!-- <div class="sidebar_background" id="sidebar_background"></div> -->
+            <!-- ？ -->
+
+            <!-- スマホ画面でサイドバーを閉じるボタン -->
+            <div class="close_button" id="js_close_button">
+                <i class="fas fa-times fa-3x"></i>
+            </div>
+
+            
+
+            <h2 class="sidebar_title">Menu</h2>
+
+            <ul class="sidebar_menu_list_wrapper">
+                <li class="sidebar_menu_list">
+                    <h3>バーガー</h3>
+                    <ul class="sidebar_menu">
+                        <li><a href="#">ハンバーガー</a></li>
+                        <li><a href="#">チーズバーガー</a></li>
+                        <li><a href="#">テリヤキバーガー</a></li>
+                        <li><a href="#">アボガドバーガー</a></li>
+                        <li><a href="#">フィッシュバーガー</a></li>
+                        <li><a href="#">ベーコンバーガー</a></li>
+                        <li><a href="#">チキンバーガー</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar_menu_list">
+                    <h3>サイド</h3>
+                    <ul class="sidebar_menu">
+                        <li><a href="#">ポテト</a></li>
+                        <li><a href="#">サラダ</a></li>
+                        <li><a href="#">ナゲット</a></li>
+                        <li><a href="#">コーン</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar_menu_list">
+                    <h3>ドリンク</h3>
+                    <ul class="sidebar_menu">
+                        <li><a href="#">コーラ</a></li>
+                        <li><a href="#">ファンタ</a></li>
+                        <li><a href="#">オレンジ</a></li>
+                        <li><a href="#">アップル</a></li>
+                        <li><a href="#">紅茶(Ice/Hot)</a></li>
+                        <li><a href="#">コーヒー(Ice/Hot)</a></li>
+                        </ul>
+                </li>
+            </ul><!-- .sidebar_menu_list_wrapper --> 
+        </div><!-- .sidebar -->
+
+
+
+        <div class="contents_group">
+            <header>
+                <!-- メニューボタン（サイドバー表示用） -->
+                <div class="sidebar_menu_button" id="js_sideMenuButton"><h2>Menu</h2></div>
+                
+                <h1>Hamburger</h1>
+
+                <form action="#" method="get" name="searchform" id="searchform">
+                    <input type="search" name="s" value="" name="keywords" id="keywords">
+                    <input type="submit" value="検索" name="searchbutton" id="searchbutton">
+                </form>
+                
+            </header>
+
+            <div class="archive_top_wrapper">
+                <img src="images/PCfrontpage_takeout.jpg" alt="ハンバーガーとオニオンリング">
+                <h2>Menu:<br><span>チーズバーガー</span></h2>
+            </div>
+
+            <div class="about_archive">
+                <h2>小見出しが入ります</h2>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            </div> <!-- .about_archive -->
+
+            <ul>
+                <li class="archive_branch_menu_wrapper">
+                    <img src="images/PCarchive_menu.jpg" alt="チーズバーガー">
+                    <dl class="archive_branch_menu">
+                        <dt>チーズバーガー</dt>
+                        <dd><p>小見出しが入ります</p>
+                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        </dd>
+                        <div>
+                            <p>詳しく見る</p>
+                        </div>
+                    </dl>
+                </li>
+        
+                <li class="archive_branch_menu_wrapper">
+                    <img src="images/PCarchive_menu.jpg" alt="チーズバーガー">
+                    <dl class="archive_branch_menu">
+                        <dt>チーズバーガー</dt>
+                        <dd><p>小見出しが入ります</p>
+                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        </dd>
+                        <div>
+                            <p>詳しく見る</p>
+                        </div>
+                    </dl>
+                </li>
+
+                <li class="archive_branch_menu_wrapper">
+                    <img src="images/PCarchive_menu.jpg" alt="チーズバーガー">
+                    <dl class="archive_branch_menu">
+                        <dt>チーズバーガー</dt>
+                        <dd><p>小見出しが入ります</p>
+                            <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                        </dd>
+                        <div>
+                            <p>詳しく見る</p>
+                        </div>
+                    </dl>
+                </li>
+            </ul>
+            
+        </div><!-- .contents_group -->
+    </div> <!-- .contents_group_wrapper -->
+    
+    
+    <footer>
+        <ul>
+            <!-- ↓ページリンク先のURLを挿入 -->
+            <li><a href="#">ショップ情報</a></li>
+            <li>|</li>
+            <li><a href="#">ヒストリー</a></li>
+        </ul>
+        <div class="copyright">
+            <p><small>&copy; Raise Tech</small></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
