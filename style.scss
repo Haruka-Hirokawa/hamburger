@@ -219,8 +219,8 @@ input {
     h2 {
         position: absolute; /*絶対配置*/
         top: 50%;
-        left: 5%;
-        transform: translate(-5%,-50%);
+        left: 10%;
+        transform: translate(-10%,-50%);
         margin: 0;
         padding: 0;
         color: white;
@@ -455,16 +455,6 @@ footer {
 // ↑メニュー写真・説明 繰り返し部分
 
 
-// ↓single、page ページ両サイド緑線部分
-.single_contents_group {
-    // box-shadow: 1rem 0 0 lightgreen inset,
-    //             -1rem 0 0 lightgreen inset;
-
-    // outline: solid 2px lightgreen;
-    // outline-offset: -2rem;
-}
-// ↑single、page ページ両サイド緑線部分
-
 
 // ↓single、page冒頭説明部分
 .about_single {
@@ -514,3 +504,128 @@ footer {
         }
     }
 }
+
+
+// ↓写真 画面いっぱい
+.picture01 {
+    margin: 3rem 0;
+    img {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+}
+// ↑写真 画面いっぱい
+
+
+// ↓写真・文章 グリッド部分
+
+// .media {
+//     padding: 10px;
+//     overflow: hidden;
+// }
+// .media__image {
+//     float: left;
+//     margin-right: 10px;
+// }
+// .media__summary {
+//     overflow: hidden;
+// }
+// .media__heading {
+//     font-size: 16px;
+//     font-weight: bold;
+//     margin-bottom: 10px;
+// }
+
+
+// .container {
+//     display: grid;
+//     gap: 20rem;
+//     grid-template-rows: 3rem 1rem 2rem 3rem 1rem;
+//     grid-template-columns: 3fr 1fr 3fr;
+//     grid-template-areas:
+//         "picture1  text1    text1   "
+//         "blank1    text1    text1   "
+//         "blank2    blank2   blank2  "
+//         "text2     text2    picture2"
+//         "text2     text2    blank3  ";
+// }
+
+// .picture1 {
+//     grid-area: picture1;
+// }
+// .item {
+//     background: #ddd;
+//     padding: 10px;
+//     border-radius: 8px;
+//     border: 3px solid #ccc;
+// }
+
+
+.grid_contents {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: 90%;
+}
+.grid_picture {
+    img {
+        width: 90%; 
+        height: auto;
+    }   
+}
+.grid_text {
+    margin: 0;
+    padding: 0;
+    width: 130%;
+    font-size: 1.3rem;
+}
+// ↑写真・文章 グリッド部分
+
+
+// ↓写真 少し小さめ
+.picture02 {
+    margin: 3rem 0;
+    img {
+        display: block;
+        margin: auto;
+    }
+}
+// ↑写真 少し小さめ
+
+// ↓写真 連続・グリッド部分
+.pictures {
+    margin: 3rem 0;
+    img {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+}
+// ↑写真 連続・グリッド部分
+
+// ↓リスト部分
+.list01 {
+    font-size: 1.5rem;
+    ol {
+        padding: 2rem 0;
+    }
+    li {
+        list-style-type: decimal; /* リストの左側に数字 */
+        // ↑リセットCSSは、基本的にli {list-style-type: none;}が指定されおり、リストマーカーを表示するよう記載
+        margin-left: 10%; /* リストの左側に余白 */
+    }
+}
+
+.list02 {
+    font-size: 1.5rem;
+    ol {
+        padding: 2rem 0;
+    }
+    li {
+        list-style-type: none; /* リストマーカーなし */
+        margin-left: 10%; /* リストの左側に余白 */
+    }
+}
+// ↑リスト部分
