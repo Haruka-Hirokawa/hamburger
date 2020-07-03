@@ -1,0 +1,639 @@
+// ==========================================================================
+// Foundation
+// ==========================================================================
+
+@import "foundation/_base";
+@import "foundation/_mixin";
+
+
+
+.contents_group_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include breakpoint( pc ) {
+        overflow:hidden; // padding-bottom: 10000px;、margin-bottom: -10000px;とセット サイドバーとメインコンテンツの高さを合わせる       
+    }
+}
+
+
+// ↓サイドバー
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 100%; // ウインドウの端から左に１００％ を指定（position: fixed;の場合）    
+    z-index: 10;
+    width: 100%;
+    height: 100%;  
+    transition: all 300ms 0s ease;    
+
+    padding: 2rem;
+    background-color: #F2EDE9;
+    color: #707070;
+
+    @include breakpoint( pc ) {
+        position: static; // position:absolute/fixed/relative;の指定を外す
+        width: 25%;
+
+        padding-bottom: 10000px;
+        margin-bottom: -10000px;
+        // 上記２行 overflow:hidden;とセット サイドバーとメインコンテンツの高さを合わせる
+    }
+}
+.is_open {
+    left: 10%;
+    overflow-y:scroll; /* 高さを指定しているので中身が超えた分はスクロールできるように */
+}
+
+// ？
+// .sidebar_background {
+//     &.is_open {
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         z-index: 5;
+//         content: "";
+//         width: 100vw;
+//         height: 100%;
+//         background-color: 0, 0, 0, 0.6;
+//     }
+// }
+// ？
+
+// ？
+// .sidebar_background {
+//     position: fixed;
+//     top: 0;
+//     left: 100%;
+//     z-index: 5;
+//     content: "";
+//     width: 100vw;
+//     height: 100%;
+//     background-color: 0, 0, 0, 0.6;
+    
+// }
+// &.is_open {
+//     left: 0;
+// }
+// ？
+
+.close_button {
+    margin-right: 10%;
+    text-align: right;
+
+    @include breakpoint( pc ) {
+        display: none;
+    }
+}
+
+.sidebar_title {
+    margin: 3rem 0;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.sidebar_menu_list {
+    list-style: none;
+    margin: 3rem 0;
+    h3 {
+        font-size: 1.7rem;
+        font-weight: normal;
+    }
+}
+
+.sidebar_menu {
+    padding: 3rem;
+    list-style: none;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    li a {
+        color: #707070;
+    }    
+}
+// ↑サイドバー
+
+
+
+// ↓ヘッダー
+// ↓メニュー ボタン
+.sidebar_menu_button{
+    margin-top: 8%;
+    margin-right: 5%;
+    color: #707070;
+    text-align: right;
+
+    @include breakpoint( pc ) {
+        display: none;
+    }
+}
+// ↑メニュー ボタン
+
+h1 {
+    margin: 2rem 0 4rem 0;
+    color: #707070;
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;    
+}
+
+// ↓検索フォーム
+#searchform {
+    height: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+input {
+    vertical-align : middle; // 検索ボックス、検索ボタンの高さのズレを修正
+}
+
+#keywords  {  
+    width: 20rem;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #707070;
+    border-radius: 5%;
+    background: url(images/searchform_loupe.jpg) no-repeat 8px;
+}
+
+#searchbutton{
+    width: 6rem;
+    padding: 1rem;
+    border: 1px solid #707070;
+    border-radius: 5%;
+    background-color: #F2EDE9;
+    font-size: 1.5rem;
+}
+// ↑検索フォーム
+// ↑ヘッダー
+
+
+// ↓frontpage、single、pageトップ画像
+.top_wrapper { /*親div*/
+    position: relative; /*相対配置*/
+    margin: 1rem 0;
+    
+    img {
+        width:100%;
+    }
+    .sp {
+        display: block;
+        @include breakpoint( pc ) {
+            display: none;
+        }
+    }
+    .pc{
+        display: none;
+        @include breakpoint( pc ) {
+            display: block;
+        }
+    }
+    h2 {
+        position: absolute; /*絶対配置*/
+        top: 50%;
+        left: 10%;
+        transform: translate(-10%,-50%);
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 3rem;
+        font-weight: normal;
+    }
+}
+// ↑frontpage、single、pageトップ画像
+
+
+// ↓Take Out・Eat in の部分
+.branch_menu_wrapper{
+    ul {
+        @include breakpoint( pc ) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+}
+
+.branch_menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+    img{
+        width: 95%;
+        margin: 1rem 0;
+    }
+    h2 {
+        position: absolute;
+        top: 5%;
+        left: 8%;
+        transform: translate(-8%,-5%);
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 3.5rem;
+        font-family: 'Roboto', sans-serif;
+        line-height: 4rem;
+    }    
+}
+
+.contents_1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%);
+    margin: 0;
+    padding: 0;
+    height: 23%;
+    margin: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(255,255,255,0.5);  
+}
+.contents_2{
+    position: absolute;
+    top: 85%;
+    left: 0;
+    transform: translate(0,-73%);
+    margin: 0;
+    padding: 0;
+    height: 23%;
+    margin: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(255,255,255,0.5);
+}
+
+dt {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+    font-weight: normal;
+}
+dd {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+// ↑Take Out・Eat in の部分
+
+
+// ↓map部分
+.access {
+    position: relative;
+    img {
+        margin-top: 3rem;
+        width: 100%;
+        height: 60rem;
+        object-fit: cover; // 画像の縦横比を維持したままトリミングして画面を埋める    
+        vertical-align: bottom; // divで囲んだimgタグ 下の余白を消す
+        filter: contrast(60%); // 画像のコントラストを調整（グレー掛けのために記載）    
+    }  
+}
+
+.map_explanation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 50%;
+    margin: 3rem auto 0;
+    padding: 3rem;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    h2 {
+        margin: 2rem 0;
+        font-size: 3rem;
+        font-weight: normal;
+        line-height: 4rem;
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+}
+// ↑map部分
+
+
+
+footer {
+    height: 15rem;
+    padding: 1rem 0;
+    background-color: #9D8670;
+    color: white;
+    text-align: center;
+    ul li{
+        display: inline;
+        font-size: 1.8rem;
+        line-height: 8rem;
+        a {
+            color: white;
+        }
+    }
+}
+.copyright {
+    margin-top: 3rem;
+}
+
+
+
+// ↓archive、archive_searchトップ画像
+.archive_top_wrapper { /*親div*/
+    position: relative; /*相対配置*/
+    margin: 1rem 0;
+    
+    img {
+        width:100%;
+        height: 22rem;
+        object-fit: none; // リサイズせず元の画像の大きさで表示
+        zoom: 1.3; // 画像を拡大
+        object-position: 0 48%; // 画像を中央以外の位置でトリミング。左上を基準にして、: 横の位置 縦の位置;
+    }
+    h2 {
+        position: absolute; /*絶対配置*/
+        top: 50%;
+        left: 5%;
+        transform: translate(-5%,-50%);
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
+        
+        span {
+            font-size: 1.5rem;
+            font-weight: normal;
+            line-height: 5rem;
+        }
+    }
+}
+// ↑archive、archive_searchトップ画像
+
+// ↓archive、archive_search冒頭説明部分
+.about {
+    margin: 2rem;
+    color: #3C2A10;
+    h2{
+        padding: 1rem 0 3rem;
+        font-size: 2.5rem;
+        font-weight: normal;
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}
+// ↑archive、archive_search冒頭説明部分
+
+// ↓メニュー写真・説明 繰り返し部分
+.archive_branch_menu_wrapper {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 95%;
+    img{
+        display: block;
+        margin: auto;
+        width: 95%;
+        height: auto;
+    }
+    
+}
+
+.archive_branch_menu {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    width: 95%;
+    background-color: #3C2B1C;
+    color: white;
+    dt {
+        margin: 2rem 0;
+        font-size: 2rem;
+        font-weight: normal;
+    }
+    dd {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    &div {
+        margin: 5rem auto 3rem;
+        padding: 1.5rem 0;
+        width: 50%;
+        border-radius: 10rem;
+        background-color: white;
+        color: #707070;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+// ↑メニュー写真・説明 繰り返し部分
+
+
+
+// ↓single、page冒頭説明部分
+.about_single {
+    display: block;
+    margin: auto;
+    padding: 2rem 0;
+    width: 90%;
+    color: #3C2A10;
+    h2{
+        padding: 1rem 0 3rem;
+        font-size: 2.5rem;
+        font-weight: normal;
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    h3 {
+        margin: 3rem 0;
+        font-size: 1.7rem;
+        font-weight: normal;
+    }
+    
+    h4 {
+        margin: 3rem 0;
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+}
+// ↑single、page冒頭説明部分
+
+
+.quote {
+    display: block;
+    margin: auto;
+    padding: 2rem 1rem;
+    width: 90%;
+    background-color: #F5F5F5;
+    font-size: 1.3rem;
+    p {
+        line-height: 2rem;
+    }
+    p + p  { // pタグ直後のpタグ
+        margin: 3rem 0 2rem;
+        a {
+            text-decoration: underline
+        }
+    }
+}
+
+
+// ↓写真 画面いっぱい
+.picture01 {
+    margin: 3rem 0;
+    img {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+}
+// ↑写真 画面いっぱい
+
+
+// ↓写真・文章 グリッド部分
+
+// .container {
+//     display: grid;
+//     gap: 20rem;
+//     grid-template-rows: 3rem 1rem 2rem 3rem 1rem;
+//     grid-template-columns: 3fr 1fr 3fr;
+//     grid-template-areas:
+//         "picture1  text1    text1   "
+//         "blank1    text1    text1   "
+//         "blank2    blank2   blank2  "
+//         "text2     text2    picture2"
+//         "text2     text2    blank3  ";
+// }
+// .picture1 {
+//     grid-area: picture1;
+// }
+// .item {
+//     background: #ddd;
+//     padding: 10px;
+//     border-radius: 8px;
+//     border: 3px solid #ccc;
+// }
+
+
+.grid_contents {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 90%;
+}
+.grid_picture {
+    img {
+        width: 90%; 
+        height: auto;
+    }   
+}
+.grid_text {
+    width: 130%;
+    font-size: 1.3rem;
+}
+// ↑写真・文章 グリッド部分
+
+
+// ↓写真 少し小さめ
+.picture02 {
+    margin: 3rem 0;
+    img {
+        display: block;
+        margin: auto;
+    }
+}
+// ↑写真 少し小さめ
+
+// ↓写真 連続・グリッド部分
+.pictures {
+    margin: 3rem 0;
+    img {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+}
+// ↑写真 連続・グリッド部分
+
+// ↓リスト部分
+.list01 {
+    font-size: 1.5rem;
+    ol {
+        padding: 2rem 0;
+    }
+    li {
+        list-style-type: decimal; /* リストの左側に数字 */
+        // ↑リセットCSSは、基本的にli {list-style-type: none;}が指定されおり、リストマーカーを表示するよう記載
+        margin-left: 10%; /* リストの左側に余白 */
+    }
+}
+
+.list02 {
+    font-size: 1.5rem;
+    ol {
+        padding: 2rem 0;
+    }
+    li {
+        list-style-type: none; /* リストマーカーなし */
+        margin-left: 5%; /* リストの左側に余白 */
+    }
+}
+// ↑リスト部分
+
+
+// ↓タグ部分
+.tag {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 3rem 0;
+    width: 90%;
+    height: 20rem;
+    background-color: #F5F5F5;
+    font-size: 1.2rem;
+    p {
+        margin-left: 10%;
+    }
+}
+// ↑タグ部分
+
+
+// ↓テーブル
+table {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 30rem;
+    td {
+        padding-left: 10%;
+        font-size: 1.5rem;
+    }
+}
+.td01 {
+    width: 40%;
+}
+// ↑テーブル
+
+
+#button{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    padding: 2.5rem;
+    border: 1px solid #707070;
+    border-radius: 1.5rem;
+    background-color: #F2EDE9;
+    font-size: 1.5rem;
+}
+
+.bold {
+    margin-left: 5%;
+    margin-bottom:5rem;
+    font-size: 1.2rem;
+}
