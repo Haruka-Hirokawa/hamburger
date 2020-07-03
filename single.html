@@ -16,7 +16,7 @@
 
 
 <body>
-    <!-- .sidebar(サイドバー部分)＋.contents_group(ヘッダーからマップまでの部分)をグルーピング -->
+    <!-- .sidebar(サイドバー部分)＋.contents_group(ヘッダーからフッターより前までの部分)をグルーピング -->
     <div class="contents_group_wrapper">
 
         <!-- ？ -->
@@ -122,16 +122,6 @@
             </div>
 
 
-            <!-- <div class="media">
-                <div class="media__image">
-                    <img src="images/PCsingle_gridcontents.jpg" alt="ハンバーガーとフライドポテト">
-                </div>
-                <div class="media__summary">
-                    <p class="media__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                </div>
-            </div> -->
-
-
             <!-- <div class="container">
                 <div class="picture1"><img src="images/PCsingle_gridcontents.jpg" alt="ハンバーガーとフライドポテト"></div>
                 <div class="item">B</div>
@@ -148,7 +138,17 @@
                     <img src="images/PCsingle_gridcontents.jpg" alt="ハンバーガーとフライドポテト">
                 </div>
                 <div class="grid_text">
-                   <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+                
+            </div>
+
+            <div class="grid_contents">
+                <div class="grid_text">
+                    <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+                <div class="grid_picture">
+                    <img src="images/PCsingle_gridcontents.jpg" alt="ハンバーガーとフライドポテト">
                 </div>
                 
             </div>
@@ -218,12 +218,35 @@
             <div class="tag">
                 <!-- ↓タグを表示するための特殊文字。< は &lt; 、> は &gt; -->
                 <p>&lt;html&gt;</p>
-                    <p>&lt;head&gt;</p>
-                    <p>&lt;head&gt;</p>
-                    <p>&lt;body&gt;</p>
-                    <p>&lt;body&gt;</p>
+                <p>　&lt;head&gt;</p>
+                <p>　&lt;head&gt;</p>
+                <p>　&lt;body&gt;</p>
+                <p>　&lt;body&gt;</p>
                 <p>&lt;/html&gt;</p>
             </div>
+
+            <table border="1" style="border-collapse: collapse"><!-- border属性 1→二重線になる、style属性を使って二重線を一つの線に変える -->            
+                <tr>
+                    <td class="td01">テーブル</td>
+                    <td>テーブル</td>
+                </tr>
+                <tr>
+                    <td>テーブル</td>
+                    <td>テーブル</td>
+                </tr>
+                <tr>
+                    <td>テーブル</td>
+                    <td>テーブル</td>
+                </tr>
+                <tr>
+                    <td>テーブル</td>
+                    <td>テーブル</td>
+                </tr>
+            </table>
+
+            <input type="submit" value="ボタン" name="searchbutton" id="button">
+
+            <p class="bold">boldboldboldboldboldbold</p>
             
         </div><!-- .contents_group -->
     </div> <!-- .contents_group_wrapper -->

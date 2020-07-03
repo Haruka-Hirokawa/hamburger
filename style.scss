@@ -520,24 +520,6 @@ footer {
 
 // ↓写真・文章 グリッド部分
 
-// .media {
-//     padding: 10px;
-//     overflow: hidden;
-// }
-// .media__image {
-//     float: left;
-//     margin-right: 10px;
-// }
-// .media__summary {
-//     overflow: hidden;
-// }
-// .media__heading {
-//     font-size: 16px;
-//     font-weight: bold;
-//     margin-bottom: 10px;
-// }
-
-
 // .container {
 //     display: grid;
 //     gap: 20rem;
@@ -550,7 +532,6 @@ footer {
 //         "text2     text2    picture2"
 //         "text2     text2    blank3  ";
 // }
-
 // .picture1 {
 //     grid-area: picture1;
 // }
@@ -567,6 +548,7 @@ footer {
     flex-direction: row;
     align-items: flex-start;
     margin: 0 auto;
+    padding: 2rem 0;
     width: 90%;
 }
 .grid_picture {
@@ -576,8 +558,6 @@ footer {
     }   
 }
 .grid_text {
-    margin: 0;
-    padding: 0;
     width: 130%;
     font-size: 1.3rem;
 }
@@ -625,7 +605,63 @@ footer {
     }
     li {
         list-style-type: none; /* リストマーカーなし */
-        margin-left: 10%; /* リストの左側に余白 */
+        margin-left: 5%; /* リストの左側に余白 */
     }
 }
 // ↑リスト部分
+
+
+// ↓タグ部分
+.tag {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 3rem 0;
+    width: 90%;
+    height: 20rem;
+    background-color: #F5F5F5;
+    font-size: 1.2rem;
+    p {
+        margin-left: 10%;
+    }
+}
+// ↑タグ部分
+
+
+// ↓テーブル
+table {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 30rem;
+    td {
+        padding-left: 10%;
+        font-size: 1.5rem;
+    }
+}
+.td01 {
+    width: 40%;
+}
+// ↑テーブル
+
+
+#button{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    padding: 2.5rem;
+    border: 1px solid #707070;
+    border-radius: 1.5rem;
+    background-color: #F2EDE9;
+    font-size: 1.5rem;
+}
+
+.bold {
+    margin-left: 5%;
+    margin-bottom:5rem;
+    font-size: 1.2rem;
+}
