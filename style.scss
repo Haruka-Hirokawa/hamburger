@@ -196,7 +196,7 @@ input {
 // ↑ヘッダー
 
 
-// ↓トップ画像
+// ↓frontpage、single、pageトップ画像
 .top_wrapper { /*親div*/
     position: relative; /*相対配置*/
     margin: 1rem 0;
@@ -204,11 +204,23 @@ input {
     img {
         width:100%;
     }
+    .sp {
+        display: block;
+        @include breakpoint( pc ) {
+            display: none;
+        }
+    }
+    .pc{
+        display: none;
+        @include breakpoint( pc ) {
+            display: block;
+        }
+    }
     h2 {
         position: absolute; /*絶対配置*/
         top: 50%;
-        left: 5%;
-        transform: translate(-5%,-50%);
+        left: 10%;
+        transform: translate(-10%,-50%);
         margin: 0;
         padding: 0;
         color: white;
@@ -216,7 +228,7 @@ input {
         font-weight: normal;
     }
 }
-// ↑トップ画像
+// ↑frontpage、single、pageトップ画像
 
 
 // ↓Take Out・Eat in の部分
@@ -330,7 +342,6 @@ dd {
 
 
 
-
 footer {
     height: 15rem;
     padding: 1rem 0;
@@ -351,7 +362,7 @@ footer {
 }
 
 
-// ↓archive.html
+
 // ↓archive、archive_searchトップ画像
 .archive_top_wrapper { /*親div*/
     position: relative; /*相対配置*/
@@ -384,8 +395,8 @@ footer {
 }
 // ↑archive、archive_searchトップ画像
 
-
-.about_archive {
+// ↓archive、archive_search冒頭説明部分
+.about {
     margin: 2rem;
     color: #3C2A10;
     h2{
@@ -398,6 +409,7 @@ footer {
         line-height: 2.5rem;
     }
 }
+// ↑archive、archive_search冒頭説明部分
 
 // ↓メニュー写真・説明 繰り返し部分
 .archive_branch_menu_wrapper {
@@ -429,7 +441,7 @@ footer {
         font-size: 1.5rem;
         line-height: 2.5rem;
     }
-    & div {
+    &div {
         margin: 5rem auto 3rem;
         padding: 1.5rem 0;
         width: 50%;
@@ -441,3 +453,215 @@ footer {
     }
 }
 // ↑メニュー写真・説明 繰り返し部分
+
+
+
+// ↓single、page冒頭説明部分
+.about_single {
+    display: block;
+    margin: auto;
+    padding: 2rem 0;
+    width: 90%;
+    color: #3C2A10;
+    h2{
+        padding: 1rem 0 3rem;
+        font-size: 2.5rem;
+        font-weight: normal;
+    }
+    p {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    h3 {
+        margin: 3rem 0;
+        font-size: 1.7rem;
+        font-weight: normal;
+    }
+    
+    h4 {
+        margin: 3rem 0;
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+}
+// ↑single、page冒頭説明部分
+
+
+.quote {
+    display: block;
+    margin: auto;
+    padding: 2rem 1rem;
+    width: 90%;
+    background-color: #F5F5F5;
+    font-size: 1.3rem;
+    p {
+        line-height: 2rem;
+    }
+    p + p  { // pタグ直後のpタグ
+        margin: 3rem 0 2rem;
+        a {
+            text-decoration: underline
+        }
+    }
+}
+
+
+// ↓写真 画面いっぱい
+.picture01 {
+    margin: 3rem 0;
+    img {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+}
+// ↑写真 画面いっぱい
+
+
+// ↓写真・文章 グリッド部分
+
+// .container {
+//     display: grid;
+//     gap: 20rem;
+//     grid-template-rows: 3rem 1rem 2rem 3rem 1rem;
+//     grid-template-columns: 3fr 1fr 3fr;
+//     grid-template-areas:
+//         "picture1  text1    text1   "
+//         "blank1    text1    text1   "
+//         "blank2    blank2   blank2  "
+//         "text2     text2    picture2"
+//         "text2     text2    blank3  ";
+// }
+// .picture1 {
+//     grid-area: picture1;
+// }
+// .item {
+//     background: #ddd;
+//     padding: 10px;
+//     border-radius: 8px;
+//     border: 3px solid #ccc;
+// }
+
+
+.grid_contents {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 2rem 0;
+    width: 90%;
+}
+.grid_picture {
+    img {
+        width: 90%; 
+        height: auto;
+    }   
+}
+.grid_text {
+    width: 130%;
+    font-size: 1.3rem;
+}
+// ↑写真・文章 グリッド部分
+
+
+// ↓写真 少し小さめ
+.picture02 {
+    margin: 3rem 0;
+    img {
+        display: block;
+        margin: auto;
+    }
+}
+// ↑写真 少し小さめ
+
+// ↓写真 連続・グリッド部分
+.pictures {
+    margin: 3rem 0;
+    img {
+        display: block;
+        margin: auto;
+        width: 90%;
+    }
+}
+// ↑写真 連続・グリッド部分
+
+// ↓リスト部分
+.list01 {
+    font-size: 1.5rem;
+    ol {
+        padding: 2rem 0;
+    }
+    li {
+        list-style-type: decimal; /* リストの左側に数字 */
+        // ↑リセットCSSは、基本的にli {list-style-type: none;}が指定されおり、リストマーカーを表示するよう記載
+        margin-left: 10%; /* リストの左側に余白 */
+    }
+}
+
+.list02 {
+    font-size: 1.5rem;
+    ol {
+        padding: 2rem 0;
+    }
+    li {
+        list-style-type: none; /* リストマーカーなし */
+        margin-left: 5%; /* リストの左側に余白 */
+    }
+}
+// ↑リスト部分
+
+
+// ↓タグ部分
+.tag {
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 3rem 0;
+    width: 90%;
+    height: 20rem;
+    background-color: #F5F5F5;
+    font-size: 1.2rem;
+    p {
+        margin-left: 10%;
+    }
+}
+// ↑タグ部分
+
+
+// ↓テーブル
+table {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 30rem;
+    td {
+        padding-left: 10%;
+        font-size: 1.5rem;
+    }
+}
+.td01 {
+    width: 40%;
+}
+// ↑テーブル
+
+
+#button{
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 90%;
+    padding: 2.5rem;
+    border: 1px solid #707070;
+    border-radius: 1.5rem;
+    background-color: #F2EDE9;
+    font-size: 1.5rem;
+}
+
+.bold {
+    margin-left: 5%;
+    margin-bottom:5rem;
+    font-size: 1.2rem;
+}
