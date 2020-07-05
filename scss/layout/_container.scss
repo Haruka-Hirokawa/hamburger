@@ -1,0 +1,9 @@
+.l-container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include breakpoint( pc ) {
+        overflow:hidden; 
+        // _sidebar.scssの padding-bottom: 10000px;、margin-bottom: -10000px;とセット サイドバーとメインコンテンツの高さを合わせる       
+    }
+}

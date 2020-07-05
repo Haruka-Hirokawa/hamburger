@@ -1,0 +1,52 @@
+// ↓ヘッダー
+// ↓メニュー ボタン
+.sidebar_menu_button{
+    margin-top: 8%;
+    margin-right: 5%;
+    color: #707070;
+    text-align: right;
+
+    @include breakpoint( pc ) {
+        display: none;
+    }
+}
+// ↑メニュー ボタン
+
+h1 {
+    margin: 2rem 0 4rem 0;
+    color: #707070;
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;    
+}
+
+// ↓検索フォーム
+#searchform {
+    height: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+input {
+    vertical-align : middle; // 検索ボックス、検索ボタンの高さのズレを修正
+}
+
+#keywords  {  
+    width: 20rem;
+    margin-right: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #707070;
+    border-radius: 5%;
+    background: url(images/searchform_loupe.jpg) no-repeat 8px;
+}
+
+#searchbutton{
+    width: 6rem;
+    padding: 1rem;
+    border: 1px solid #707070;
+    border-radius: 5%;
+    background-color: #F2EDE9;
+    font-size: 1.5rem;
+}
+// ↑検索フォーム
+// ↑ヘッダー
