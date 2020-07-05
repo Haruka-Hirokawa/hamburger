@@ -3,17 +3,27 @@
 // ==========================================================================
 
 @import "foundation/_base";
-@import "foundation/_mixin";
+
 
 // ==========================================================================
 // Layout
 // ==========================================================================
 
-@import "foundation/_main_and_sidebar";
-@import "foundation/_sidebar";
-@import "foundation/_header";
-@import "foundation/_footer";
+@import "layout/_container";
+@import "layout/_sidebar";
+@import "layout/_header";
+@import "layout/_footer";
 
+
+// ==========================================================================
+// Object
+// ==========================================================================
+
+// -----------------------------------------------------------------
+// Component
+// -----------------------------------------------------------------
+
+@import "object/component/_button";
 
 
 
@@ -270,9 +280,7 @@ dd {
         display: none;
     }
 }
-.c-button {
-    cursor: pointer;
-}
+
 
 .index_button_wrapper {
     display: none;

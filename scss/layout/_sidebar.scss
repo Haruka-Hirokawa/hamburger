@@ -1,0 +1,105 @@
+// ↓サイドバー
+.l-sidebar {
+    position: fixed;
+    top: 0;
+    left: 100%; // ウインドウの端から左に１００％ を指定（position: fixed;の場合）    
+    z-index: 10;
+    width: 100%;
+    height: 100%;  
+    transition: all 300ms 0s ease;    
+
+    padding: 2rem;
+    background-color: #F2EDE9;
+    color: #707070;
+
+    @include breakpoint( pc ) {
+        position: static; // position:absolute/fixed/relative;の指定を外す
+        width: 25%;
+
+        padding-bottom: 10000px;
+        margin-bottom: -10000px;
+        // 上記２行 _container.scssの overflow:hidden;とセット サイドバーとメインコンテンツの高さを合わせる
+    }
+}
+.is-open {
+    left: 10%;
+    overflow-y:scroll; /* 高さを指定しているので中身が超えた分はスクロールできるように */
+}
+
+.l-sidebar__background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+    
+    display: none;
+}
+// ？
+// .sidebar_background {
+//     &.is_open {
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         z-index: 5;
+//         content: "";
+//         width: 100vw;
+//         height: 100%;
+//         background-color: 0, 0, 0, 0.6;
+//     }
+// }
+// ？
+
+// ？
+// .sidebar_background {
+//     position: fixed;
+//     top: 0;
+//     left: 100%;
+//     z-index: 5;
+//     content: "";
+//     width: 100vw;
+//     height: 100%;
+//     background-color: 0, 0, 0, 0.6;
+    
+// }
+// &.is_open {
+//     left: 0;
+// }
+// ？
+
+.close_button {
+    margin-right: 10%;
+    text-align: right;
+
+    @include breakpoint( pc ) {
+        display: none;
+    }
+}
+
+.sidebar_title {
+    margin: 3rem 0;
+    padding-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.sidebar_menu_list {
+    list-style: none;
+    margin: 3rem 0;
+    h3 {
+        font-size: 1.7rem;
+        font-weight: normal;
+    }
+}
+
+.sidebar_menu {
+    padding: 3rem;
+    list-style: none;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    li a {
+        color: #707070;
+    }    
+}
+// ↑サイドバー

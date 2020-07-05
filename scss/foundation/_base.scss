@@ -10,7 +10,30 @@ body{
 a {
     text-decoration: none;    
 }
-ul li {
+li, dl, dt, dd {
     list-style: none;
 }
 // ↑共通部分
+
+
+// ↓メディアクエリ
+@mixin breakpoint($point) {
+    @if $point == tablet {
+        @media (min-width: 641px) {
+            @content;
+        }
+    }
+
+    @if $point == pc {
+        @media (min-width: 769px) {
+            @content;
+        }
+    }
+
+    @if $point == wide {
+        @media (min-width: 1000px) {
+            @content;
+        }
+    }
+}
+// ↑メディアクエリ
