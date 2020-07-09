@@ -10,9 +10,9 @@
 // ==========================================================================
 
 @import "layout/_container";
+@import "layout/_footer";
 @import "layout/_sidebar";
 @import "layout/_header";
-@import "layout/_footer";
 
 
 // ==========================================================================
@@ -30,7 +30,10 @@
 // Project
 // -----------------------------------------------------------------
 
-@import "object/project/_p-globalmenu";
+@import "object/project/_branchmenu";
+@import "object/project/_globalmenu";
+@import "object/project/_topimage";
+
 
 
 // -----------------------------------------------------------------
@@ -42,110 +45,6 @@
 
 
 
-// ↓frontpage、single、pageトップ画像
-.top_wrapper { /*親div*/
-    position: relative; /*相対配置*/
-    margin: 1rem 0;
-    
-    img {
-        width:100%;
-    }
-    .sp {
-        display: block;
-        @include breakpoint( pc ) {
-            display: none;
-        }
-    }
-    .pc{
-        display: none;
-        @include breakpoint( pc ) {
-            display: block;
-        }
-    }
-    h2 {
-        position: absolute; /*絶対配置*/
-        top: 50%;
-        left: 10%;
-        transform: translate(-10%,-50%);
-        margin: 0;
-        padding: 0;
-        color: white;
-        font-size: 3rem;
-        font-weight: normal;
-    }
-}
-// ↑frontpage、single、pageトップ画像
-
-
-// ↓Take Out・Eat in の部分
-.branch_menu_wrapper{
-    ul {
-        @include breakpoint( pc ) {
-            display: flex;
-            justify-content: center;
-        }
-    }
-    
-}
-
-.branch_menu {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    
-    img{
-        width: 95%;
-        margin: 1rem 0;
-    }
-    h2 {
-        position: absolute;
-        top: 5%;
-        left: 8%;
-        transform: translate(-8%,-5%);
-        margin: 0;
-        padding: 0;
-        color: white;
-        font-size: 3.5rem;
-        font-family: 'Roboto', sans-serif;
-        line-height: 4rem;
-    }    
-}
-
-.contents_1 {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0,-50%);
-    margin: 0;
-    padding: 0;
-    height: 23%;
-    margin: 1.5rem;
-    padding: 1rem;
-    background-color: rgba(255,255,255,0.5);  
-}
-.contents_2{
-    position: absolute;
-    top: 85%;
-    left: 0;
-    transform: translate(0,-73%);
-    margin: 0;
-    padding: 0;
-    height: 23%;
-    margin: 1.5rem;
-    padding: 1rem;
-    background-color: rgba(255,255,255,0.5);
-}
-
-dt {
-    margin: 1.5rem 0;
-    font-size: 2rem;
-    font-weight: normal;
-}
-dd {
-    font-size: 1.5rem;
-    line-height: 2rem;
-}
-// ↑Take Out・Eat in の部分
 
 
 // ↓map部分
@@ -189,37 +88,7 @@ dd {
 
 
 
-// ↓archive、archive_searchトップ画像
-.archive_top_wrapper { /*親div*/
-    position: relative; /*相対配置*/
-    margin: 1rem 0;
-    
-    img {
-        width:100%;
-        height: 22rem;
-        object-fit: none; // リサイズせず元の画像の大きさで表示
-        zoom: 1.3; // 画像を拡大
-        object-position: 0 48%; // 画像を中央以外の位置でトリミング。左上を基準にして、: 横の位置 縦の位置;
-    }
-    h2 {
-        position: absolute; /*絶対配置*/
-        top: 50%;
-        left: 5%;
-        transform: translate(-5%,-50%);
-        margin: 0;
-        padding: 0;
-        color: white;
-        font-size: 3rem;
-        font-family: 'Roboto', sans-serif;
-        
-        span {
-            font-size: 1.5rem;
-            font-weight: normal;
-            line-height: 5rem;
-        }
-    }
-}
-// ↑archive、archive_searchトップ画像
+
 
 // ↓archive、archive_search冒頭説明部分
 .about {
