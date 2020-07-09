@@ -16,35 +16,24 @@
 
 
 <body>
-    <!-- .sidebar(サイドバー部分)＋.contents_group(ヘッダーからマップまでの部分)をグルーピング -->
-    <div class="l-container">
-
-        <!-- ？ -->
-        <!-- サイドバーのグレーがかってる部分 -->
-        <!-- <div class="sidebar_background" id="sidebar_background"></div> -->
-        <!-- ？ -->
+    <!-- .l-sidebar(サイドバー部分)＋.l-main(ヘッダーからフッターの前までの部分)をグルーピング -->
+    <div class="l-container">        
 
         <!-- サイドバー -->
         <div class="l-sidebar" id="sidebar">
 
-            <!-- ？ -->
-            <!-- サイドバーのグレーがかってる部分 -->
-            <!-- <div class="sidebar_background" id="sidebar_background"></div> -->
-            <!-- ？ -->
-
             <!-- スマホ画面でサイドバーを閉じるボタン -->
-            <div class="close_button" id="js_close_button">
+            <button class="l-sidebar-button--close" id="sidebar-button--close">
                 <i class="fas fa-times fa-3x"></i>
-            </div>
-
+            </button>
             
 
-            <h2 class="sidebar_title">Menu</h2>
+            <h2 class="l-sidebar__title">Menu</h2>
 
-            <ul class="sidebar_menu_list_wrapper">
-                <li class="sidebar_menu_list">
+            <ul class="p-globalmenu">
+                <li class="p-globalmenu__list">
                     <h3>バーガー</h3>
-                    <ul class="sidebar_menu">
+                    <ul class="p-globalmenu__list__detail">
                         <li><a href="#">ハンバーガー</a></li>
                         <li><a href="#">チーズバーガー</a></li>
                         <li><a href="#">テリヤキバーガー</a></li>
@@ -54,18 +43,18 @@
                         <li><a href="#">チキンバーガー</a></li>
                     </ul>
                 </li>
-                <li class="sidebar_menu_list">
+                <li class="p-globalmenu__list">
                     <h3>サイド</h3>
-                    <ul class="sidebar_menu">
+                    <ul class="p-globalmenu__list__detail">
                         <li><a href="#">ポテト</a></li>
                         <li><a href="#">サラダ</a></li>
                         <li><a href="#">ナゲット</a></li>
                         <li><a href="#">コーン</a></li>
                     </ul>
                 </li>
-                <li class="sidebar_menu_list">
+                <li class="p-globalmenu__list">
                     <h3>ドリンク</h3>
-                    <ul class="sidebar_menu">
+                    <ul class="p-globalmenu__list__detail">
                         <li><a href="#">コーラ</a></li>
                         <li><a href="#">ファンタ</a></li>
                         <li><a href="#">オレンジ</a></li>
@@ -74,15 +63,19 @@
                         <li><a href="#">コーヒー(Ice/Hot)</a></li>
                         </ul>
                 </li>
-            </ul><!-- .sidebar_menu_list_wrapper --> 
-        </div><!-- .sidebar -->
+            </ul> <!-- .p-globalmenu --> 
+        </div><!-- .l-sidebar -->
+
+        <!-- スマホ画面でサイドバーを出現させた時にbody部分を透過 -->
+        <div class="l-sidebar-background" id="sidebar-background"></div>
+        
 
 
 
-        <div class="contents_group">
+        <div class="l-main">
             <header>
                 <!-- メニューボタン（サイドバー表示用） -->
-                <div class="l-sidebar-button--open" id="sidebar-button--open"><h2>Menu</h2></div>
+                <button class="l-sidebar-button--open" id="sidebar-button--open"><h2>Menu</h2></button>
                 
                 <h1>Hamburger</h1>
 
@@ -164,8 +157,8 @@
                 <div class="pointer c-button">＞＞</div> 
             </div>
             
-        </div><!-- .contents_group -->
-    </div> <!-- .contents_group_wrapper -->
+        </div><!-- .l-main -->
+    </div> <!-- .l-container -->
     
     
     <footer>

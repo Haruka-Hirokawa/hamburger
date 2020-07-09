@@ -1,16 +1,5 @@
 // ↓ヘッダー
-// ↓メニュー ボタン
-.l-sidebar-button--open{
-    margin-top: 8%;
-    margin-right: 5%;
-    color: #707070;
-    text-align: right;
 
-    @include breakpoint( pc ) {
-        display: none;
-    }
-}
-// ↑メニュー ボタン
 
 h1 {
     margin: 2rem 0 4rem 0;

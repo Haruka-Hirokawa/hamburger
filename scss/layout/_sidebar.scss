@@ -13,20 +13,43 @@
     color: #707070;
 
     @include breakpoint( pc ) {
-        position: static; // position:absolute/fixed/relative;の指定を外す
+        position: static; // position: absolute/fixed/relative;の指定を外す
         width: 25%;
 
         padding-bottom: 10000px;
         margin-bottom: -10000px;
         // 上記２行 _container.scssの overflow:hidden;とセット サイドバーとメインコンテンツの高さを合わせる
     }
-}
-.is-open {
-    left: 10%;
-    overflow-y:scroll; /* 高さを指定しているので中身が超えた分はスクロールできるように */
+
+    &.is-open {
+        left: 10%;
+        overflow-y:scroll; /* 高さを指定しているので中身が超えた分はスクロールできるように */
+    }
+
+    &-button--close {
+        display: block;
+        margin: 0 0 0 auto; // 右寄せ
+        margin-right: 10%;
+    
+        @include breakpoint( pc ) {
+            display: none;
+        }
+    }
+
+    &__title {
+        display: none;
+
+        @include breakpoint( pc ) {
+            display: block;
+            margin: 3rem 0;
+            padding-bottom: 3rem;
+            font-size: 2rem;
+        }
+        
+    }
 }
 
-.l-sidebar__background {
+.l-sidebar-background {
     position: fixed;
     top: 0;
     right: 0;
@@ -37,39 +60,20 @@
     
     display: none;
 }
+// ↑サイドバー
 
 
-.close_button {
-    margin-right: 10%;
-    text-align: right;
+// ↓header内 メニュー ボタン
+.l-sidebar-button--open{
+    display: block;
+    margin: 0 0 0 auto; // 右寄せ
+    margin-top: 8%;
+    margin-right: 5%;
+    color: #707070;
+    
 
     @include breakpoint( pc ) {
         display: none;
     }
 }
-
-.sidebar_title {
-    margin: 3rem 0;
-    padding-bottom: 3rem;
-    font-size: 2rem;
-}
-
-.sidebar_menu_list {
-    list-style: none;
-    margin: 3rem 0;
-    h3 {
-        font-size: 1.7rem;
-        font-weight: normal;
-    }
-}
-
-.sidebar_menu {
-    padding: 3rem;
-    list-style: none;
-    font-size: 1.5rem;
-    line-height: 3rem;
-    li a {
-        color: #707070;
-    }    
-}
-// ↑サイドバー
+// ↑header内 メニュー ボタン
