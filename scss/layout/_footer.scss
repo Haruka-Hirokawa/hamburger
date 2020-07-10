@@ -1,4 +1,4 @@
-footer {
+.l-footer {
     height: 15rem;
     padding: 1rem 0;
     background-color: #9D8670;
@@ -12,7 +12,7 @@ footer {
             color: white;
         }
     }
-}
-.copyright {
-    margin-top: 3rem;
+    &__copyright {
+        margin-top: 3rem;
+    }
 }
