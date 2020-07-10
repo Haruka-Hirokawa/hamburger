@@ -1,3 +1,6 @@
+@import "../variables";
+
+
 // ↓サイドバー
 .l-sidebar {
     position: fixed;
@@ -10,7 +13,7 @@
 
     padding: 2rem;
     background-color: #F2EDE9;
-    color: #707070;
+    color: $text-gray;
 
     @include breakpoint( pc ) {
         position: static; // position: absolute/fixed/relative;の指定を外す
@@ -48,7 +51,9 @@
         
     }
 }
+// ↑サイドバー
 
+// ↓スマホ画面 サイドバー出現時 モーダル部分（body部分を透過）
 .l-sidebar-background {
     position: fixed;
     top: 0;
@@ -60,7 +65,7 @@
     
     display: none;
 }
-// ↑サイドバー
+// ↑スマホ画面 サイドバー出現時 モーダル部分（body部分を透過）
 
 
 // ↓header内 メニュー ボタン
@@ -69,7 +74,7 @@
     margin: 0 0 0 auto; // 右寄せ
     margin-top: 8%;
     margin-right: 5%;
-    color: #707070;
+    color: $text-gray;
     
 
     @include breakpoint( pc ) {

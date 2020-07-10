@@ -1,13 +1,16 @@
-// ↓ヘッダー
+@import "../variables";
 
-
-h1 {
-    margin: 2rem 0 4rem 0;
-    color: #707070;
-    font-size: 4rem;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;    
+.l-header {
+    h1 {
+        margin: 2rem 0 4rem 0;
+        color: $text-gray;
+        font-size: 4rem;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;    
+    }
 }
+
+
 
 // ↓検索フォーム
 #searchform {
@@ -38,4 +41,3 @@ input {
     font-size: 1.5rem;
 }
 // ↑検索フォーム
-// ↑ヘッダー

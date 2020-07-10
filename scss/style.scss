@@ -33,6 +33,7 @@
 @import "object/project/_access";
 @import "object/project/_branchmenu";
 @import "object/project/_globalmenu";
+@import "object/project/_lead";
 @import "object/project/_topimage";
 
 
@@ -48,23 +49,6 @@
 
 
 
-
-// ↓archive、archive_search冒頭説明部分
-.about {
-    margin: 2rem;
-    color: #3C2A10;
-    h2{
-        padding: 1rem 0 3rem;
-        font-size: 2.5rem;
-        font-weight: normal;
-    }
-    p {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-    }
-}
-// ↑archive、archive_search冒頭説明部分
-
 // ↓メニュー写真・説明 繰り返し部分
 .archive_branch_menu_wrapper {
     margin: 0 auto;
@@ -76,6 +60,9 @@
         width: 95%;
         height: auto;
     }
+    // @include breakpoint( tablet ) {
+    //     display: flex;
+    // }
     
 }
 

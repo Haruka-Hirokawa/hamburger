@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .p-branchmenu{
     ul {
         @include breakpoint( pc ) {
@@ -58,10 +60,12 @@
             margin: 1.5rem 0;
             font-size: 2rem;
             font-weight: normal;
+            color: $text-brown;
         }
         dd {
             font-size: 1.5rem;
             line-height: 2rem;
+            color: $text-brown;
         }
 
     }
