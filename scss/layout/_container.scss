@@ -1,6 +1,5 @@
 .l-container {
     display: flex;
-    flex-direction: row-reverse;
 
     @include breakpoint( pc ) {
         overflow:hidden; 
