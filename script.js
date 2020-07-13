@@ -1,12 +1,12 @@
 $(function() {
   // 「#sidebar-button--open」のclickイベント→「#sidebar」を開く
-  $('#sidebar-button--open').click(function() {
+  $('#sidebar-button--open').on('click', function() {
     $('#sidebar').addClass('is-open');
     $('#sidebar-background').fadeIn();
   });
 
   // 「#js_close_button」のclickイベント→「#sidebar」を閉じる
-  $('#sidebar-button--close').click(function() {
+  $('#sidebar-button--close').on('click', function() {
       $('#sidebar').removeClass('is-open');
       $('#sidebar-background').fadeOut();
   });

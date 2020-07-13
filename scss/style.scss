@@ -23,7 +23,7 @@
 // Component
 // -----------------------------------------------------------------
 
-// @import "object/component/_button";
+@import "object/component/_card";
 
 
 // -----------------------------------------------------------------
@@ -34,6 +34,7 @@
 @import "object/project/_branchmenu";
 @import "object/project/_globalmenu";
 @import "object/project/_lead";
+@import "object/project/_pagination";
 @import "object/project/_topimage";
 
 
@@ -47,105 +48,6 @@
 
 
 
-
-
-// ↓メニュー写真・説明 繰り返し部分
-.archive_branch_menu_wrapper {
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    width: 95%;
-    img{
-        display: block;
-        margin: auto;
-        width: 95%;
-        height: auto;
-    }
-    // @include breakpoint( tablet ) {
-    //     display: flex;
-    // }
-    
-}
-
-.archive_branch_menu {
-    display: block;
-    margin: auto;
-    padding: 1rem;
-    width: 95%;
-    background-color: #3C2B1C;
-    color: white;
-    dt {
-        margin: 2rem 0;
-        font-size: 2rem;
-        font-weight: normal;
-    }
-    dd {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-    }
-    div {
-        margin: 5rem auto 3rem;
-        padding: 1.5rem 0;
-        width: 50%;
-        border-radius: 10rem;
-        background-color: white;
-        color: #707070;
-        font-size: 1.5rem;
-        text-align: center;
-        cursor: pointer;
-    }
-}
-// ↑メニュー写真・説明 繰り返し部分
-
-
-// ↓スライドボタン部分
-.change_button_wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 5rem auto 3rem;
-    width: 90%;
-    color: #707070;
-    font-size: 1.5rem;
-
-    @include breakpoint( tablet ) {
-        display: none;
-    }
-}
-
-
-.index_button_wrapper {
-    display: none;
-    margin: 10rem 0 3rem;
-    @include breakpoint( tablet ) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    div {
-        margin: 0 0.5rem;
-    }
-    // div :second-child{
-    //     font-size: 1.5rem;
-    // }
-}
-.pointer {
-    font-size: 1.5rem;
-}
-.index_button {
-    padding: 1rem 0;
-    width: 4rem;
-    border: 1px solid #707070;
-    background-color: white;
-    color: #707070;
-    font-size: 1.5rem;
-    text-align: center;
-    &:hover {
-        color: white;
-        background-color: #3C2B1C;
-    }
-}
-
-// ↑スライドボタン部分
 
 
 

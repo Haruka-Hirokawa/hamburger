@@ -25,18 +25,23 @@
                 <!-- メニューボタン（サイドバー表示用） -->
                 <button class="l-sidebar-button--open" id="sidebar-button--open"><h2>Menu</h2></button>
                 
-                <h1>Hamburger</h1>
+                <p class="l-header__sitename">Hamburger</p>
 
-                <form action="#" method="get" name="searchform" id="searchform">
-                    <input type="search" name="s" value="" name="keywords" id="keywords">
-                    <input type="submit" value="検索" name="searchbutton" id="searchbutton">
+                <form action="#" method="get" name="searchform" id="searchform" class="l-header__searchform">
+                    <input type="search" name="s" value="" name="keywords" id="keywords" class="l-header__searchform__keywords">
+                    <label for="keywords">検索ワード<!-- ←labelの内容 省略不可 --></label>
+                    <!-- ↑label for…文字列“検索ワード”が何なのかをブラウザに教える -->
+                    
+                    <input type="submit" value="検索" name="searchbutton" id="searchbutton" class="l-header__searchform__searchbutton">
+                    <label for="searchbutton">検索ボタン<!-- ←labelの内容 省略不可 --></label>
+                    <!-- ↑label for…文字列“検索ボタン”が何なのかをブラウザに教える -->
                 </form>
                 
             </header>
 
             <div class="p-topimage02">
                 <img src="images/PCarchive_title.jpg" alt="ハンバーガーとオニオンリング">
-                <h2>Menu:<br><span>チーズバーガー</span></h2>
+                <h1 class="p-topimage02__title">Menu:<br><span>チーズバーガー</span></h1>
             </div>
 
             <div class="p-lead">
@@ -45,64 +50,58 @@
             </div>
 
             <ul>
-                <li class="archive_branch_menu_wrapper">
-                    <img src="images/PCarchive_menu.jpg" alt="チーズバーガー">
-                    <dl class="archive_branch_menu">
+                <li class="c-card">
+                    <img src="images/PCarchive_menu.jpg" class="c-card__img" alt="チーズバーガー">
+                    <dl class="c-card__contents">
                         <dt>チーズバーガー</dt>
                         <dd><p>小見出しが入ります</p>
                             <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                         </dd>
-                        <div>
-                            <p>詳しく見る</p>
-                        </div>
+                        <button type="button" onclick="location.href='#'" class="c-card__contents__button">詳しく見る</button>                        
                     </dl>
                 </li>
         
-                <li class="archive_branch_menu_wrapper">
-                    <img src="images/PCarchive_menu.jpg" alt="チーズバーガー">
-                    <dl class="archive_branch_menu">
+                <li class="c-card">
+                    <img src="images/PCarchive_menu.jpg" class="c-card__img" alt="ダブルチーズバーガー">
+                    <dl class="c-card__contents">
                         <dt>ダブルチーズバーガー</dt>
                         <dd><p>小見出しが入ります</p>
                             <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                         </dd>
-                        <div>
-                            <p>詳しく見る</p>
-                        </div>
+                        <button type="button" onclick="location.href='#'" class="c-card__contents__button">詳しく見る</button>
                     </dl>
                 </li>
 
-                <li class="archive_branch_menu_wrapper">
-                    <img src="images/PCarchive_menu.jpg" alt="チーズバーガー">
-                    <dl class="archive_branch_menu">
+                <li class="c-card">
+                    <img src="images/PCarchive_menu.jpg" class="c-card__img" alt="スペシャルチーズバーガー">
+                    <dl class="c-card__contents">
                         <dt>スペシャルチーズバーガー</dt>
                         <dd><p>小見出しが入ります</p>
                             <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
                         </dd>
-                        <div>
-                            <p>詳しく見る</p>
-                        </div>
+                        <button type="button" onclick="location.href='#'" class="c-card__contents__button">詳しく見る</button>
                     </dl>
                 </li>
             </ul>
 
-            <div class="change_button_wrapper">
-                <div class="c-button">＜＜ 前へ</div>
-                <div class="c-button">次へ ＞＞</div>
+            <div class="p-pagination--sp">
+                <button>＜＜ 前へ</button>
+                <button>次へ ＞＞</button>
             </div>
 
-            <div class="index_button_wrapper">
-                <div>page 1/10</div>
-                <div class="pointer c-button">＜＜</div>
-                <div class="index_button c-button">1</div>
-                <div class="index_button c-button">2</div>
-                <div class="index_button c-button">3</div>
-                <div class="index_button c-button">4</div>
-                <div class="index_button c-button">5</div>
-                <div class="index_button c-button">6</div>
-                <div class="index_button c-button">7</div>
-                <div class="index_button c-button">8</div>
-                <div class="index_button c-button">9</div>
-                <div class="pointer c-button">＞＞</div> 
+            <div class="p-pagination--tablet">
+                <p>page 1/10</p>
+                <button class="p-pagination--tablet__pointer">＜＜</button>
+                <button class="p-pagination--tablet__button">1</button>
+                <button class="p-pagination--tablet__button">2</button>
+                <button class="p-pagination--tablet__button">3</button>
+                <button class="p-pagination--tablet__button">4</button>
+                <button class="p-pagination--tablet__button">5</button>
+                <button class="p-pagination--tablet__button">6</button>
+                <button class="p-pagination--tablet__button">7</button>
+                <button class="p-pagination--tablet__button">8</button>
+                <button class="p-pagination--tablet__button">9</button>
+                <button class="p-pagination--tablet__pointer">＞＞</button> 
             </div>
             
         </div><!-- .l-main -->
@@ -149,7 +148,7 @@
                         <li><a href="#">アップル</a></li>
                         <li><a href="#">紅茶(Ice/Hot)</a></li>
                         <li><a href="#">コーヒー(Ice/Hot)</a></li>
-                        </ul>
+                    </ul>
                 </li>
             </ul> <!-- .p-globalmenu --> 
         </div><!-- .l-sidebar -->
