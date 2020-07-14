@@ -23,7 +23,15 @@
 // Component
 // -----------------------------------------------------------------
 
+@import "object/component/_bold";
+@import "object/component/_button";
 @import "object/component/_card";
+@import "object/component/_gridContents";
+@import "object/component/_gridImages";
+@import "object/component/_img";
+@import "object/component/_quote";
+@import "object/component/_table";
+@import "object/component/_tag";
 
 
 // -----------------------------------------------------------------
@@ -33,7 +41,9 @@
 @import "object/project/_access";
 @import "object/project/_branchmenu";
 @import "object/project/_globalmenu";
+@import "object/project/_heading";
 @import "object/project/_lead";
+@import "object/project/_list";
 @import "object/project/_pagination";
 @import "object/project/_topimage";
 
@@ -46,193 +56,3 @@
 // @import "object/utility/_align";
 
 
-
-
-
-
-
-// ↓single、page冒頭説明部分
-.about_single {
-    display: block;
-    margin: auto;
-    padding: 2rem 0;
-    width: 90%;
-    color: #3C2A10;
-    h2{
-        padding: 1rem 0 3rem;
-        font-size: 2.5rem;
-        font-weight: normal;
-    }
-    p {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-    }
-    h3 {
-        margin: 3rem 0;
-        font-size: 1.7rem;
-        font-weight: normal;
-    }
-    
-    h4 {
-        margin: 3rem 0;
-        font-size: 1.5rem;
-        font-weight: normal;
-    }
-}
-// ↑single、page冒頭説明部分
-
-
-.quote {
-    display: block;
-    margin: auto;
-    padding: 2rem 1rem;
-    width: 90%;
-    background-color: #F5F5F5;
-    font-size: 1.3rem;
-    p {
-        line-height: 2rem;
-    }
-    p + p  { // pタグ直後のpタグ
-        margin: 3rem 0 2rem;
-        a {
-            text-decoration: underline
-        }
-    }
-}
-
-
-// ↓写真 画面いっぱい
-.picture01 {
-    margin: 3rem 0;
-    img {
-        display: block;
-        margin: auto;
-        width: 90%;
-    }
-}
-// ↑写真 画面いっぱい
-
-
-// ↓写真・文章 グリッド部分
-.grid_contents {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 0 auto;
-    padding: 2rem 0;
-    width: 90%;
-}
-.grid_picture {
-    img {
-        width: 90%; 
-        height: auto;
-    }   
-}
-.grid_text {
-    width: 130%;
-    font-size: 1.3rem;
-}
-// ↑写真・文章 グリッド部分
-
-
-// ↓写真 少し小さめ
-.picture02 {
-    margin: 3rem 0;
-    img {
-        display: block;
-        margin: auto;
-    }
-}
-// ↑写真 少し小さめ
-
-// ↓写真 連続・グリッド部分
-.pictures {
-    margin: 3rem 0;
-    img {
-        display: block;
-        margin: auto;
-        width: 90%;
-    }
-}
-// ↑写真 連続・グリッド部分
-
-// ↓リスト部分
-.list01 {
-    font-size: 1.5rem;
-    ol {
-        padding: 2rem 0;
-    }
-    li {
-        list-style-type: decimal; /* リストの左側に数字 */
-        // ↑リセットCSSは、基本的にli {list-style-type: none;}が指定されおり、リストマーカーを表示するよう記載
-        margin-left: 10%; /* リストの左側に余白 */
-    }
-}
-
-.list02 {
-    font-size: 1.5rem;
-    ol {
-        padding: 2rem 0;
-    }
-    li {
-        list-style-type: none; /* リストマーカーなし */
-        margin-left: 5%; /* リストの左側に余白 */
-    }
-}
-// ↑リスト部分
-
-
-// ↓タグ部分
-.tag {
-    display: block;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 3rem 0;
-    width: 90%;
-    height: 20rem;
-    background-color: #F5F5F5;
-    font-size: 1.2rem;
-    p {
-        margin-left: 10%;
-    }
-}
-// ↑タグ部分
-
-
-// ↓テーブル
-table {
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    width: 90%;
-    height: 30rem;
-    td {
-        padding-left: 10%;
-        font-size: 1.5rem;
-    }
-}
-.td01 {
-    width: 40%;
-}
-// ↑テーブル
-
-
-#button{
-    display: block;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    width: 90%;
-    padding: 2.5rem;
-    border: 1px solid #707070;
-    border-radius: 1.5rem;
-    background-color: #F2EDE9;
-    font-size: 1.5rem;
-}
-
-.bold {
-    margin-left: 5%;
-    margin-bottom:5rem;
-    font-size: 1.2rem;
-}
