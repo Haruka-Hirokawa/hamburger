@@ -1,18 +1,29 @@
 @import "../variables";
 
 .l-header {
+    @include breakpoint( pc ) {
+        display: flex;
+        justify-content: space-between;       
+    }
+
     &__sitename {
         margin: 2rem 0 4rem 0;
         color: $text-gray;
         font-size: 4rem;
         font-family: 'Roboto', sans-serif;
-        text-align: center;    
+        text-align: center;
+        @include breakpoint( pc ) {
+            margin: 5%;           
+        }   
     }
 
     &__searchform {
         height: 3rem;
         margin-bottom: 4rem;
         text-align: center;
+        @include breakpoint( pc ) {
+            margin: 5% 3%;           
+        }
 
         input {
             vertical-align : middle; // 検索ボックス、検索ボタンの高さのズレを修正
