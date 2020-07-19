@@ -1,16 +1,26 @@
 $(function() {
-  // 「#js_sideMenuButton」のclickイベント→「#sidebar」を開く
-  $('#js_sideMenuButton').click(function() {
-    $('#js_sidebar').addClass('is_open');
-    // ？　$('#sidebar_background').addClass('is_open');　？
-    // ？　$('body').addClass('is_open');　？
+  // 「#sidebar-button--open」のclickイベント→「#sidebar」を開く
+  $('#sidebar-button--open').on('click', function() {
+    $('#sidebar').addClass('is-open');
+    $('#sidebar-background').fadeIn();
   });
 
   // 「#js_close_button」のclickイベント→「#sidebar」を閉じる
-  $('#js_close_button').click(function() {
-      $('#js_sidebar').removeClass('is_open');
-      // ？　$('#sidebar_background').removeClass('is_open');　？
-      // ？　$('body').removeClass('is_open');　？
+  $('#sidebar-button--close').on('click', function() {
+      $('#sidebar').removeClass('is-open');
+      $('#sidebar-background').fadeOut();
   });
   
+// 画面サイズがPC以上になったらサイドバーを開いた状態でもPC用のデフォルト画面に戻す
+  var $win = $(window);
+
+  $win.on('load resize', function() {
+    var windowWidth = window.innerWidth;
+
+    if (windowWidth >= 769) {
+      // PCの処理
+      $('#sidebar').removeClass('is-open');
+      $('#sidebar-background').fadeOut();
+    } 
+  });
 });
